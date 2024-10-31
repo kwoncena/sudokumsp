@@ -5,7 +5,7 @@ const easyColors = [
     { color: "#EEA6CA", description: "Flowerbed" },
     { color: "#E4B434", description: "Sunlit Path" },
     { color: "#221512", description: "Park Bench" },
-    { color: "#8B295E", description: "Roses" },
+    { color: "#8B295E", description: "Floral" },
     { color: "#9C6C50", description: "Dirt Path" },
     { color: "#5F5C5B", description: "Shadowed Area" },
     { color: "#A38DA8", description: "Stone Pavement" }
