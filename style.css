@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  #sudoku-game {
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  #difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  #difficulty-buttons button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #color-picker {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .color {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 50%; /* Make colors circular */
+    border: 2px solid transparent;
+  }
+  
+  #game-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  #sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-gap: 1px;
+    margin-right: 20px; /* Space between grid and color key */
+  }
+  
+  .cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #color-key {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .key-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .key-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .key-label {
+    font-size: 14px;
+    color: #333;
+  }
+  
