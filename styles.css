@@ -1,0 +1,151 @@
+:root {
+    --bg-main: #f0f2f5;
+    --bg-body: #fff;
+    --color-txt: #000;
+    --filled-color: #000;
+    --filled-bg: #caf0f8;
+
+    --white: #fff;
+    --blue: #00aeef;
+    --red: #e91e63;
+    --black: #000;
+
+    --nav-size: 70px;
+    --sudoku-cell-size: 50px;
+
+    --border-radius: 10px;
+
+    --space-y: 20px;
+
+    --gap: 5px;
+
+    --font-size: 1.5rem;
+    --font-size-lg: 2rem;
+    --font-size-xl: 3rem;
+}
+
+.dark {
+    --bg-main: #2a2a38;
+    --bg-body: #1a1a2e;
+    --color-txt: #6a6a6a;
+    --filled-color: #4f4f63;
+    --filled-bg: #000;
+}
+
+/* General reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: "Potta One", cursive;
+    background-color: var(--bg-body);
+    overflow-x: hidden;
+    user-select: none;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: var(--nav-size);
+}
+
+.nav-logo {
+    font-size: var(--font-size-lg);
+    color: var(--blue);
+}
+
+.main {
+    padding-top: var(--nav-size);
+    display: grid;
+    place-items: center;
+}
+
+/* Game Grid */
+.main-sudoku-grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(9, auto);
+}
+
+.main-grid-cell {
+    height: var(--sudoku-cell-size);
+    width: var(--sudoku-cell-size);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-main);
+    display: grid;
+    place-items: center;
+    font-size: var(--font-size);
+    cursor: pointer;
+}
+
+/* Shades of color for each "number" */
+.color {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#color1 { background-color: #FFCCCC; } /* Light Pink */
+#color2 { background-color: #FFE5CC; } /* Light Peach */
+#color3 { background-color: #FFFFCC; } /* Light Yellow */
+#color4 { background-color: #E5FFCC; } /* Light Green */
+#color5 { background-color: #CCFFE5; } /* Mint */
+#color6 { background-color: #CCFFFF; } /* Light Cyan */
+#color7 { background-color: #CCE5FF; } /* Light Blue */
+#color8 { background-color: #D5CCFF; } /* Lavender */
+#color9 { background-color: #FFCCF2; } /* Light Magenta */
+
+.dark .main-grid-cell.hover {
+    border: 1px solid var(--blue);
+}
+
+/* Error and Selection Styles */
+.main-grid-cell.err {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.main-grid-cell.filled {
+    background-color: var(--filled-bg);
+    color: var(--filled-color);
+}
+
+.main-grid-cell.selected {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.main-grid-cell:hover {
+    border: 2px solid var(--blue);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 800px) {
+    :root {
+        --nav-size: 50px;
+        --sudoku-cell-size: 30px;
+        --border-radius: 5px;
+        --space-y: 10px;
+        --gap: 2px;
+        --font-size: 1rem;
+        --font-size-lg: 1.5rem;
+        --font-size-xl: 2rem;
+    }
+
+    .main-grid-cell {
+        width: var(--sudoku-cell-size);
+        height: var(--sudoku-cell-size);
+    }
+}
